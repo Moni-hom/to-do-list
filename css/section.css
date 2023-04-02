@@ -1,0 +1,14 @@
+.section {
+    background: rgb(252, 247, 247);
+    margin:10px;
+}
+
+.section__header {
+	border-bottom: 1px solid rgb(193, 193, 193);
+	padding: 15px;
+	margin: 0;
+}
+
+.section__tasks {
+	padding: 20px;
+}
