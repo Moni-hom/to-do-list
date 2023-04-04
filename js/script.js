@@ -6,6 +6,22 @@
         render();
     };
 
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
+        render();
+    };
+    
+    const blindEvents = () => {
+        const removeButtons = document.querySelectorAll(".js-remove");
+
+        removeButtons.forEach((removeButtons, index) => {
+            removeButtons.addEventListener("click", () => {
+                removeTask(index);
+            });
+        });
+
+    };
+
     const render = () => {
         let htmlString = "";
 
@@ -23,7 +39,10 @@
             </li>    
             `;
         }
-    }
+        document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        blindEvents()
+    };
 
     init();
 }
