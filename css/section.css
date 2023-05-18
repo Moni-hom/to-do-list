@@ -1,34 +1,29 @@
 .section {
     background: white;
-    margin:10px;
-	padding: 20px;
 }
 
-.section__header {
-	border-bottom: 1px solid rgb(118, 115, 115);
+.section__form {
 	padding: 15px;
-	margin: 0;
 }
 
 .section__addTask {
+	padding: 15px;
+	margin: 0;
+	border-bottom: 1px solid rgb(184, 182, 182);
+	
+}
+
+.section__header {
+	border-bottom: 1px solid rgb(184, 182, 182);
+	background-color: white;
 	padding: 20px;
+	margin-top: 15px;
+	margin-bottom: 0;
 }
 
 .section__tasks {
 	padding: 20px;
 }
 
-.tasks {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
 
-.tasks__item {
-	display: grid;
-	border-bottom: 1px solid rgb(184, 182, 182);
-	grid-template-columns: auto 1fr auto;
-	grid-gap: 10px;
-	padding: 10px;
-	align-items: center;
-}
+
