@@ -2,7 +2,7 @@
     const tasks = [];
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({content: newTaskContent});
+        tasks.push({ content: newTaskContent });
         render();
     };
 
@@ -49,7 +49,7 @@
                 <button class="tasks__button tasks__button--done js-toggleDone">
                     ${task.done ? "✔" : ""}
                 </button>
-                <span class="tasks__content${task.done ? "tasks__content--done" : ""}">${task.content}</span>
+                <span class="tasks__content${task.done ? " tasks__content--done" : ""}">${task.content}</span>
                 <button class="tasks__button task__button--remove js-remove">🗑️
                 </button>
             </li>    
@@ -80,7 +80,7 @@
         render();
 
         const form = document.querySelector(".js-form");
-        
+
         form.addEventListener("submit", onFormSubmit);
     };
 
