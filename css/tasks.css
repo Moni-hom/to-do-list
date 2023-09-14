@@ -31,10 +31,11 @@
 
 .tasks__button--done {
     background-color: green;
+	transition: 0.5s;
 }
 
 .tasks__button--done:hover {
-	background-color: rgb(48, 141, 1);
+	background-color: rgb(67, 187, 3);
 	transform: scale(1.1,1.1);
 }
 
@@ -43,14 +44,15 @@
 }
 
 .task__button--remove {
-	background-color: rgb(221, 1, 1);
+	background-color: red;
+	transition: 0.5s;
 }
 
 .task__button--remove:hover {
-	background-color: rgb(179, 68, 68);
+	background-color: rgb(235, 103, 27);
 	transform: scale(1.1,1.1);
 }
 
 .task__button--remove:active {
-	background-color: rgb(249, 55, 55);
+	background-color: rgb(255, 178, 62);
 }
