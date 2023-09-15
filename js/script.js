@@ -42,6 +42,13 @@
         });
     };
 
+    const makrAllDoneTasks = () => {
+        tasks = tasks.map((task) => {
+            return { ...tasks, done: true};
+        });
+       render();
+    };
+
 
 
     const renderTasks = () => {
@@ -65,9 +72,24 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
     };
 
-    const renderButtons = () => { };
+    const renderButtons = () => { 
+        let disappearingButtons = " ";
 
-    const bindButtonsEvents = () => { };
+        if (tasks.length >= 1) {
+            disappearingButtons += `
+            <button class="tasksButton hideDoneTasksButon">${
+                hideDoneTasks ? "Odkryj ukończone" : "Ukryj ukończone"
+            }</button>
+            <button class="tasksButton markAllDoneTaskButton">Ukończ wszystkie</button>
+            `;
+            }  
+        document.querySelector(".js-buttons").innerHTML = disappearingButtons;
+        }; 
+
+    const bindButtonsEvents = () => { 
+        const makrAllDoneTasks = document.querySelector(".markAllDoneTasksButton");
+        
+    };
 
     const render = () => {
         renderTasks();
