@@ -18,14 +18,14 @@
 .form__button {
 	border: none;
 	background: hwb(188 1% 43%);
-	transition: 1s;
+	transition: 0.5s;
 	color: white;
 	padding: 10px;
 }
 
 .form__button:hover {
 	background: hsl(187, 100%, 31%);
-	transform: scale(1.1,1.1);
+	transform: scale(1.05,1.05);
 }
 
 .form__button:active {
