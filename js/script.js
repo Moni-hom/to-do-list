@@ -11,14 +11,14 @@
     };
 
     const removeTask = (taskIndex) => {
-        tasks = [...tasks.filter((task, i) => i != taskIndex)
-        ];
-
+        tasks = [...tasks.filter((task, index) => index != taskIndex)];
         render();
-    };
+      };
 
     const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+        tasks = tasks.map((task, index) => {
+            return index === taskIndex ? { ...task, done: !task.done } : task;
+        });
         render();
     };
 
