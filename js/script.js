@@ -8,15 +8,9 @@
   };
 
   const removeTask = (index) => {
-    tasks = [...tasks.slice(0, index), ...tasks.slice(index + 1)];
+    tasks = [...tasks.filter((task, i) => i !== index)];
     render();
   };
-
-  // nie działa task
-  //   const removeTask = (index) => {
-  //     tasks = [...tasks.filter((task, i) => i != index)];
-  //     render();
-  //   };
 
   const toggleTaskDone = (index) => {
     tasks = tasks.map((task, i) => {
