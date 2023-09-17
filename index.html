@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista zadań</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="images/icon-to-do-list.png">
-    <meta property="og:image" content="images/shareList.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="images/icon-to-do-list.png" />
+    <meta property="og:image" content="images/shareList.png" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/section.css" rel="stylesheet" />
     <link href="css/form.css" rel="stylesheet" />
     <link href="css/tasks.css" rel="stylesheet" />
+    <link href="css/hideButton.css" rel="stylesheet" />
     <script defer src="js/script.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body class="body">
+  <body class="body">
     <main class="main">
-        <header>
-            <h1>Lista zadań</h1>
-        </header>
-        <section class="section">
-            <h2 class="section__addTask"> Dodaj nowe zadanie</h2>
+      <header>
+        <h1>Lista zadań</h1>
+      </header>
+      <section class="section">
+        <h2 class="section__addTask">Dodaj nowe zadanie</h2>
 
-            <div class="section__form">
-                <form class="form js-form">
-                    <input class="form__input js-newTask" placeholder="Co jest do zrobienia?">
-                    <button class="form__button js-from__button">Dodaj zadanie</button>
-                </form>
-            </div>
-        </section>
-        <section class="section">
-            <h2 class="section__header">Lista zadań</h2>
-            <div class="section__buttons js-buttons"></div>
-            <div>
-                <ul class="task js-tasks"></ul>
-            </div>
-        </section>
+        <div class="section__form">
+          <form class="form js-form">
+            <input
+              class="form__input js-newTask"
+              placeholder="Co jest do zrobienia?"
+            />
+            <button class="form__button js-from__button">Dodaj zadanie</button>
+          </form>
+        </div>
+      </section>
+      <section class="section">
+        <h2 class="section__header">Lista zadań</h2>
+        <div class="section__buttons js-buttons"></div>
+        <div>
+          <ul class="task js-tasks"></ul>
+        </div>
+      </section>
     </main>
-
-</body>
-
+  </body>
 </html>

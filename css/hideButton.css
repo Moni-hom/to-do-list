@@ -1,0 +1,6 @@
+.section__button {
+  padding: 10px;
+  border: none;
+  background-color: white;
+  color: hwb(188 1% 43%);
+}
