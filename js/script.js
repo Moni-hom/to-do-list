@@ -8,7 +8,7 @@
   };
 
   const removeTask = (index) => {
-    tasks = [...tasks.filter((task, i) => i !== index)];
+    tasks = tasks.filter((_, i) => i !== index);
     render();
   };
 
@@ -40,7 +40,7 @@
   };
 
   const markAllDoneTasks = () => {
-    tasks = tasks.map((task) => {
+    tasks = tasks.map((_) => {
       return { ...tasks, done: true };
     });
     render();
