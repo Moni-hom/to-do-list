@@ -109,35 +109,18 @@
   };
 
   const renderButtons = () => {
-    const buttonsElement = document.querySelector(".js-buttons");
+    let disappearingButtons = " ";
 
-    if (!tasks.length) {
-      buttonsElement.innerHTML = "";
-      return;
+    if (tasks.length >= 1) {
+      disappearingButtons += `
+        <button class="section__buttons js-hideDoneTasksButton">${
+          hideDoneTasks ? "Odkryj ukończone" : "Ukryj ukończone"
+        }</button>
+        <button class="section__buttons markAllDoneButton">Ukończ wszystkie</button>
+      `;
     }
-    buttonsElement.innerHTML = `
-        <button class="section__button js-hideDoneTasksButton">
-            ${hideDoneTasks ? "Odkryj ukończone" : "Ukryj ukończone"}
-        </button>
-        <button class="section__button markAllDoneButton"
-             ${tasks.every(({ done }) => done) ? "disabled" : ""}>
-         Ukończ wszystkie
-        </button>
-    `;
+    document.querySelector(".js-buttons").innerHTML = disappearingButtons;
   };
-  //   const renderButtons = () => {
-  //     let disappearingButtons = " ";
-
-  //     if (tasks.length >= 1) {
-  //       disappearingButtons += `
-  //             <button class="tasksButton js-hideDoneTasksButton">${
-  //               hideDoneTasks ? "Odkryj ukończone" : "Ukryj ukończone"
-  //             }</button>
-  //             <button class="tasksButton markAllDoneButton">Ukończ wszystkie</button>
-  //             `;
-  //     }
-  //     document.querySelector(".js-buttons").innerHTML = disappearingButtons;
-  //   };
 
   const render = () => {
     renderTasks();
