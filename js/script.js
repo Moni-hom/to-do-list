@@ -40,8 +40,8 @@
   };
 
   const markAllDoneTasks = () => {
-    tasks = tasks.map((_) => {
-      return { ...tasks, done: true };
+    tasks = tasks.map((task) => {
+      return { ...task, done: true };
     });
     render();
   };
@@ -69,6 +69,7 @@
 
   const hideStatus = () => {
     hideDoneTasks = !hideDoneTasks;
+    render();
   };
 
   const hideAllDoneTasks = () => {
@@ -88,7 +89,7 @@
     for (const task of tasks) {
       htmlString += `
             <li
-                class="tasks__item js-task ${
+                class="tasks__item ${
                   task.done & hideDoneTasks ? "hidden" : " "
                 }">
 
