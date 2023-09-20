@@ -17,7 +17,12 @@
   background-color: white;
   padding: 20px;
   margin-top: 15px;
-  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.section__header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .section__tasks {
@@ -25,12 +30,8 @@
 }
 
 .section__buttons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: end;
-  padding: 10px;
   border: none;
   background-color: white;
   color: hwb(188 1% 43%);
+  font-size: medium;
 }
