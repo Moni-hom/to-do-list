@@ -10,7 +10,9 @@
   border-bottom: 1px solid rgb(193, 193, 193);
   grid-template-columns: auto 1fr auto;
   grid-gap: 10px;
-  padding: 10px;
+  padding: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
   align-items: center;
   word-break: break-all;
 }
@@ -38,7 +40,6 @@
 
 .tasks__button--done:hover {
   background-color: rgb(67, 187, 3);
-  transform: scale(1.1, 1.1);
 }
 
 .tasks__button--done:active {
@@ -52,7 +53,6 @@
 
 .task__button--remove:hover {
   background-color: rgb(235, 103, 27);
-  transform: scale(1.1, 1.1);
 }
 
 .task__button--remove:active {

@@ -56,16 +56,7 @@
     }
   };
 
-  const TaskIsDone = (task) => (task.done ? true : false);
-
-  const EveryTaskDone = () => {
-    const markAllDoneButton = document.querySelector(".markAllDoneButton");
-    if (markAllDoneButton != null) {
-      if (tasks.every((task) => TaskIsDone(task))) {
-        markAllDoneButton.toggleAttribute("disabled");
-      }
-    }
-  };
+  const taskIsDone = (task) => (task.done ? true : false);
 
   const hideStatus = () => {
     hideDoneTasks = !hideDoneTasks;
@@ -109,17 +100,24 @@
   };
 
   const renderButtons = () => {
-    let disappearingButtons = " ";
+    let extraButtonsHTMLConten = " ";
 
     if (tasks.length >= 1) {
-      disappearingButtons += `
+      extraButtonsHTMLConten += `
         <button class="section__buttons js-hideDoneTasksButton">${
           hideDoneTasks ? "Odkryj ukończone" : "Ukryj ukończone"
         }</button>
         <button class="section__buttons markAllDoneButton">Ukończ wszystkie</button>
       `;
     }
-    document.querySelector(".js-buttons").innerHTML = disappearingButtons;
+
+    const markAllDoneButton = document.querySelector(".markAllDoneButton");
+    if (markAllDoneButton != null) {
+      if (tasks.every((task) => taskIsDone(task))) {
+        markAllDoneButton.toggleAttribute("disabled");
+      }
+    }
+    document.querySelector(".js-buttons").innerHTML = extraButtonsHTMLConten;
   };
 
   const render = () => {
@@ -130,7 +128,6 @@
     bindRemoveEvents();
     bindToggleDoneEvents();
     bindButtonsEvents();
-    EveryTaskDone();
   };
 
   const onFormSubmit = (event) => {

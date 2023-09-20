@@ -2,22 +2,33 @@
   background: white;
 }
 
+@media (max-width: 767px) {
+  .section__header {
+    flex-direction: column;
+  }
+}
+
 .section__form {
   padding: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .section__addTask {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
   padding: 15px;
-  margin: 0;
   border-bottom: 1px solid rgb(184, 182, 182);
 }
 
 .section__header {
   border-bottom: 1px solid rgb(184, 182, 182);
   background-color: white;
-  padding: 20px;
+  padding: 15px;
   margin-top: 15px;
   margin-left: 15px;
+  margin-right: 15px;
 }
 
 .section__header {
@@ -26,7 +37,7 @@
 }
 
 .section__tasks {
-  padding: 20px;
+  padding: 15px;
 }
 
 .section__buttons {
@@ -34,4 +45,12 @@
   background-color: white;
   color: hwb(188 1% 43%);
   font-size: medium;
+}
+
+.section__buttons:hover {
+  color: hsl(180, 100%, 30%);
+}
+
+.section__buttons:disabled {
+  color: #bb0707;
 }
