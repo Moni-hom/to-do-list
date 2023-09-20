@@ -90,7 +90,7 @@
       htmlString += `
             <li
                 class="tasks__item ${
-                  task.done & hideDoneTasks ? "hidden" : " "
+                  task.done & hideDoneTasks ? "task__item--hidden" : " "
                 }">
 
                 <button class="tasks__button tasks__button--done js-toggleDone">
