@@ -107,7 +107,7 @@
     if (tasks.length >= 1) {
       extraButtonsHTMLConten += `
         <button class="section__buttons js-hideDoneTasksButton">
-        ${hideDoneTasks ? "Odkryj ukończone" : "Ukryj ukończone"}
+        ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
         <button class="section__buttons markAllDoneButton"
         ${tasks.every(({ done }) => done) ? " disabled " : ""}
         >
