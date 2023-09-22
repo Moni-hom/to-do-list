@@ -40,9 +40,11 @@
   };
 
   const markAllDoneTasks = () => {
-    tasks = tasks.map((task) => {
-      return { ...task, done: true };
-    });
+    tasks = tasks.map((task) => ({
+      ...task,
+      done: true,
+    }));
+
     render();
   };
 
@@ -107,8 +109,10 @@
         <button class="section__buttons js-hideDoneTasksButton">
         ${hideDoneTasks ? "Odkryj ukończone" : "Ukryj ukończone"}
         <button class="section__buttons markAllDoneButton"
-        ${tasks.every(({ done }) => (done ? "disabled" : ""))}
-        >Ukończ wszystkie</button>
+        ${tasks.every(({ done }) => done) ? " disabled " : ""}
+        >
+          Ukończ wszystkie
+        </button>
       `;
     }
 
