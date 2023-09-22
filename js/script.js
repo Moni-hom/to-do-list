@@ -104,10 +104,11 @@
 
     if (tasks.length >= 1) {
       extraButtonsHTMLConten += `
-        <button class="section__buttons js-hideDoneTasksButton">${
-          hideDoneTasks ? "Odkryj ukończone" : "Ukryj ukończone"
-        }</button>
-        <button class="section__buttons markAllDoneButton">Ukończ wszystkie</button>
+        <button class="section__buttons js-hideDoneTasksButton">
+        ${hideDoneTasks ? "Odkryj ukończone" : "Ukryj ukończone"}
+        <button class="section__buttons markAllDoneButton"
+        ${tasks.every(({ done }) => (done ? "disabled" : ""))}
+        >Ukończ wszystkie</button>
       `;
     }
 
@@ -123,7 +124,6 @@
   const render = () => {
     renderTasks();
     renderButtons();
-
     hideAllDoneTasks();
     bindRemoveEvents();
     bindToggleDoneEvents();

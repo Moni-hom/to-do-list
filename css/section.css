@@ -45,6 +45,7 @@
   background-color: white;
   color: hwb(188 1% 43%);
   font-size: medium;
+  cursor: pointer;
 }
 
 .section__buttons:hover {
@@ -52,5 +53,5 @@
 }
 
 .section__buttons:disabled {
-  color: #6c6b6b;
+  color: #544e48;
 }
